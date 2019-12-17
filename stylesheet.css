@@ -30,3 +30,8 @@ footer {
     margin-left: 155px;
     margin-top: 250px;
 }
+
+tr {
+    margin: 0;
+    padding: 0;
+}
