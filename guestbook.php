@@ -23,15 +23,15 @@
         </nav>
         <main>
             <h1>Gästebuch</h1>
-            <form>
+            <form method="POST">
                 <table>
                     <tr>
                         <td><p>Name / Vorname: </p></td>
-                        <td><input type="text" ></td>
+                        <td><input type="text" name="name"></td>
                     </tr>
                     <tr>
                         <td><p>E-Mail: </p></td>
-                        <td><input type="text" ></td>
+                        <td><input type="text" name="mail"></td>
                     </tr>
                     <tr>
                         <td><p>Message: </p></td>
@@ -39,13 +39,18 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="submit" value="Eintragen"><input type="reset" value="Löschen"></td>
+                        <td><input type="submit" name="submit" value="Eintragen">  <input type="reset" value="Löschen"></td>
                     </tr>
                 </table>
             </form>
+            <p>[<a href="guestbook_read.php">Gästebuch lesen</a>]</p>
         </main>
         <footer>
             <img src="img/jakarta-banner.gif">
         </footer>
     </body>
 </html>
+
+<?php
+
+?>
