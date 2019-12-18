@@ -52,5 +52,17 @@
 </html>
 
 <?php
+    $content = fopen("ausleihe.txt", "a");
+    if ($content == FALSE) {
+        echo "<br>Datei konnte nicht zum Schreiben geöfnet werden.";
+    } else {
 
+    }
+    $kundenid = "Name: " . $_POST["name"] . "<br>";
+    
+    if (fputs ($content, utf8_decode("$kundenid"))) {
+        echo "<br>Angaben wurden gespeichert.";
+    }
+    
+    fclose($content);
 ?>
