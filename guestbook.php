@@ -52,17 +52,17 @@
 </html>
 
 <?php
-    $content = fopen("ausleihe.txt", "a");
-    if ($content == FALSE) {
-        echo "<br>Datei konnte nicht zum Schreiben geöfnet werden.";
-    } else {
 
+    if((!empty($_POST["name"])) && (!empty($_POST["mail"])) && (!empty($_POST["message"]))) {
+        //if($_POST["name"] == "") {    
+            $verbindung = fopen("guestbook.txt", "a");
+            if ($verbindung == TRUE) { 
+                $content = "Name: " . $_POST["name"] . "<br>Mail: " . $_POST["mail"] . "<br>Message: " . $_POST["message"] . "<br><br>";
+                if (fputs ($verbindung, utf8_decode("$content"))) {
+                }
+            }
+            fclose($verbindung);    
+        //}
     }
-    $kundenid = "Name: " . $_POST["name"] . "<br>";
-    
-    if (fputs ($content, utf8_decode("$kundenid"))) {
-        echo "<br>Angaben wurden gespeichert.";
-    }
-    
-    fclose($content);
+
 ?>
