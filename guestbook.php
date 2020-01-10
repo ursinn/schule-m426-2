@@ -52,7 +52,7 @@
 </html>
 
 <?php
-
+if(isset($_POST['submit'])) {
     if((!empty($_POST["name"])) && (!empty($_POST["mail"])) && (!empty($_POST["message"]))) {
         //if($_POST["name"] == "") {    
             $verbindung = fopen("guestbook.txt", "a");
@@ -64,5 +64,6 @@
             fclose($verbindung);    
         //}
     }
+}
 
 ?>
