@@ -17,7 +17,7 @@
             <a href="#">
                 <img src="img/guestbook.gif">
             </a>
-            <a href="registr.html">
+            <a href="registr.php">
                 <img src="img/witze.gif">
             </a>
         </nav>
