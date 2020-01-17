@@ -57,7 +57,7 @@ if(isset($_POST['submit'])) {
 		$verbindung = fopen("guestbook.txt", "a");
         if ($verbindung == TRUE) { 
 			$content = "Name: " . $_POST["name"] . "<br>Mail: " . $_POST["mail"] . "<br>Message: " . $_POST["message"] . "<br><br>";
-			fputs ($verbindung, utf8_decode("$content")))
+			fputs ($verbindung, utf8_decode("$content"));
 		}
 		fclose($verbindung);		
     }
