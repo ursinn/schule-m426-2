@@ -54,15 +54,12 @@
 <?php
 if(isset($_POST['submit'])) {
     if((!empty($_POST["name"])) && (!empty($_POST["mail"])) && (!empty($_POST["message"]))) {
-        //if($_POST["name"] == "") {    
-            $verbindung = fopen("guestbook.txt", "a");
-            if ($verbindung == TRUE) { 
-                $content = "Name: " . $_POST["name"] . "<br>Mail: " . $_POST["mail"] . "<br>Message: " . $_POST["message"] . "<br><br>";
-                if (fputs ($verbindung, utf8_decode("$content"))) {
-                }
-            }
-            fclose($verbindung);    
-        //}
+		$verbindung = fopen("guestbook.txt", "a");
+        if ($verbindung == TRUE) { 
+			$content = "Name: " . $_POST["name"] . "<br>Mail: " . $_POST["mail"] . "<br>Message: " . $_POST["message"] . "<br><br>";
+			fputs ($verbindung, utf8_decode("$content")))
+		}
+		fclose($verbindung);		
     }
 }
 
