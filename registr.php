@@ -23,7 +23,7 @@
         </nav>
         <main>
             <h1>Registrieren</h1>
-            <form>
+            <form method="post" action="registr.php">
                 <table>
                     <tr>
                         <td><p>Anrede</p></td>
