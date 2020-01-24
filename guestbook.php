@@ -31,7 +31,7 @@
                     </tr>
                     <tr>
                         <td><p>E-Mail: </p></td>
-                        <td><input type="text" name="mail"></td>
+                        <td><input type="email" name="mail"></td>
                     </tr>
                     <tr>
                         <td><p>Message: </p></td>
