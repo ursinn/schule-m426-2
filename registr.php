@@ -27,22 +27,22 @@
                 <table>
                     <tr>
                         <td><p>Anrede</p></td>
-                        <td><p><select name="anrede">
+                        <td><p><select name="anrede" required>
                             <option value="frau">Frau</option>
                             <option value="mann">Mann</option>
                         </select></p></td>
                     </tr>
                     <tr>
                         <td><p>Vorname</p></td>
-                        <td><input type="text" ></td>
+                        <td><input type="text" required></td>
                     </tr>
                     <tr>
                         <td><p>Name</p></td>
-                        <td><input type="text" ></td>
+                        <td><input type="text" required></td>
                     </tr>
                     <tr>
                         <td><p>Telefon</p></td>
-                        <td><input type="text" ></td>
+                        <td><input type="text" required></td>
                     </tr>
                     <tr>
                         <td></td>

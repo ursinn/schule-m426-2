@@ -27,15 +27,15 @@
                 <table>
                     <tr>
                         <td><p>Name / Vorname: </p></td>
-                        <td><input type="text" name="name"></td>
+                        <td><input type="text" name="name" required></td>
                     </tr>
                     <tr>
                         <td><p>E-Mail: </p></td>
-                        <td><input type="email" name="mail"></td>
+                        <td><input type="email" name="mail" required></td>
                     </tr>
                     <tr>
                         <td><p>Message: </p></td>
-                        <td><textarea name="message" id="" cols="30" rows="10"></textarea></td>
+                        <td><textarea name="message" id="" cols="30" rows="10" required></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
