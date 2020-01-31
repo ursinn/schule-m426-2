@@ -59,10 +59,11 @@
 </html>
 
 <?php
+#Wenn Daten Gesendet Werden dann werden sie überprüft
 if(isset($_POST['submit'])) {
     $error = false;
 
-    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'] && ($error=flase)))) {
+    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'] && ($error==flase)))) {
 		$verbindung = fopen('guestbook.txt', 'a');
         if ($verbindung == TRUE) {
 			$content = "Name: " .$_POST['name']. "<br>Mail: " .$_POST['mail']. "<br>Message: " .$_POST['message']. "<br><br>";

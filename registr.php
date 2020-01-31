@@ -65,7 +65,7 @@
 if(isset($_POST['submit'])) {
     $error = false;
 
-    if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error=flase)))) {
+    if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error==flase)))) {
 		$verbindung = fopen('user.txt', 'a');
         if ($verbindung == TRUE) {
 			$content ="<br>Anrede: " .$_POST['anrede']. "Name: " .$_POST['name']. "<br>Vorname: " .$_POST['vorname']. "<br>Telefon: " .$_POST['telefon']. "<br><br>";
