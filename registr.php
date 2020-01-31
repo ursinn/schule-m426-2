@@ -68,7 +68,7 @@ if(isset($_POST['submit'])) {
     if((!empty($_POST['name'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error=flase)))) {
 		$verbindung = fopen('user.txt', 'a');
         if ($verbindung == TRUE) {
-			$content = "Name: " .$_POST['name']. "<br>Mail: " .$_POST['mail']. "<br>Message: " .$_POST['message']. "<br><br>";
+			$content = "Name: " .$_POST['name']. "<br>Vorname: " .$_POST['vorname']. "<br>Telefon: " .$_POST['telefon']. "<br><br>";
 
 			fputs ($verbindung, utf8_decode("$content"));
 		}
