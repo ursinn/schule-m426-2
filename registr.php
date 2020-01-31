@@ -36,17 +36,17 @@
                     <tr>
                         <!-- Eingabe des Vornamens -->
                         <td><p>Vorname</p></td>
-                        <td><input name="vorname" type="text" required></td>
+                        <td><input name="vorname" type="text" value="<?php $vorname ?>" required></td>
                     </tr>
                     <tr>
                         <!-- Eingabe des Namens -->
                         <td><p>Name</p></td>
-                        <td><input name="name" type="text" required></td>
+                        <td><input name="name" type="text" value="<?php $name ?>" required></td>
                     </tr>
                     <tr>
                         <!-- Eingabe der Telefon nummer -->
                         <td><p>Telefon</p></td>
-                        <td><input name="telefon" type="text" required></td>
+                        <td><input name="telefon" type="text" value="<?php $telefon ?>" required></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -64,6 +64,10 @@
 <?php
 #Wenn Daten Gesendet Werden dann werden sie überprüft
 if(isset($_POST['submit'])) {
+  $name = trim($_POST['name']);
+  $anrede = trim($_POST['anrede']);
+  $vorname = trim($_POST['vorname']);
+  $telefon = trim($_POST['telefon']);
     $error = false;
 
     if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error==flase)) {
@@ -79,7 +83,7 @@ if(isset($_POST['submit'])) {
 		}
     #Die Verbinndung zur TXT Datei wird Getrennt
 		fclose($verbindung);
-  } else {
+  } else if($error==true) {
     #Error Falls die Daten Nicht Richtig Ausgefühlt wurden
     echo "Daten wurden Nicht Richtig Ausgefühlt";
   }
