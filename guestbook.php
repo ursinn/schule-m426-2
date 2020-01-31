@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <!-- Design-Verknüpfung -->
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <!-- Website Überschrift -->
         <title>PHP-GmbH Home</title>
     </head>
     <body>
@@ -67,7 +69,7 @@ if(isset($_POST['submit'])) {
     $message = trim($_POST['message']);
     $error = false;
 
-    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'])) && ($error==flase)) {
+    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'])) && ($error==false)) {
     #Verbinndung wird aufgebaut
     $verbindung = fopen('guestbook.txt', 'a');
         #Wenn die Verbinndung besteht dann werden die Daten Gespeichert
@@ -80,7 +82,7 @@ if(isset($_POST['submit'])) {
 		fclose($verbindung);
   } else if($error==true) {
     #Error Falls die Daten Nicht Richtig Ausgefühlt wurden
-    echo "Daten wurden Nicht Richtig Ausgefühlt";
+    echo "Daten wurden Nicht Richtig Ausgefüllt";
   }
 }
 
