@@ -27,7 +27,7 @@
             <br>
             <p>
             <?php
-                readfile("guestbook.txt");
+                readfile('guestbook.txt');
             ?>
             </p>
             <br>
