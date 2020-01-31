@@ -46,7 +46,7 @@
                     <tr>
                         <!-- Eingabe der Telefon nummer -->
                         <td><p>Telefon</p></td>
-                        <td><input name="telefon" type="text" value="<?php $telefon ?>" required></td>
+                        <td><input name="telefon" type="number" value="<?php $telefon ?>" required></td>
                     </tr>
                     <tr>
                         <td></td>
