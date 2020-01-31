@@ -55,7 +55,7 @@
                     </tr>
                 </table>
             </form>
-            <p>[<a href="useradd.php">Users lesen</a>]</p>
+            <p>[<a href="adduser.php">Users lesen</a>]</p>
         </main>
         <footer>
             <img src="img/jakarta-banner.gif">
