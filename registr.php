@@ -36,17 +36,17 @@
                     <tr>
                         <!-- Eingabe des Vornamens -->
                         <td><p>Vorname</p></td>
-                        <td><input type="text" required></td>
+                        <td><input name="" type="text" required></td>
                     </tr>
                     <tr>
                         <!-- Eingabe des Namens -->
                         <td><p>Name</p></td>
-                        <td><input type="text" required></td>
+                        <td><input name="" type="text" required></td>
                     </tr>
                     <tr>
                         <!-- Eingabe der Telefon nummer -->
                         <td><p>Telefon</p></td>
-                        <td><input type="text" required></td>
+                        <td><input name="" type="text" required></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -61,3 +61,20 @@
         </footer>
     </body>
 </html>
+<?php
+if(isset($_POST['submit'])) {
+    $error = false;
+
+    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'] && ($error=flase)))) {
+		$verbindung = fopen('guestbook.txt', 'a');
+        if ($verbindung == TRUE) {
+			$content = "Name: " .$_POST['name']. "<br>Mail: " .$_POST['mail']. "<br>Message: " .$_POST['message']. "<br><br>";
+
+			fputs ($verbindung, utf8_decode("$content"));
+		}
+		fclose($verbindung);
+  } else {
+    echo "Daten wurden Nicht Richtig Ausgefühlt";
+  }
+}
+ ?>

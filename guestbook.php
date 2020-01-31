@@ -6,9 +6,11 @@
         <title>PHP-GmbH Home</title>
     </head>
     <body>
+        <!-- Firmen Bild -->
         <header>
             <img src="img/banner.gif">
         </header>
+        <!-- Navigation -->
         <nav>
             <img src="img/tomcat.gif">
             <a href="index.html">
@@ -21,24 +23,29 @@
                 <img src="img/witze.gif">
             </a>
         </nav>
+        <!-- Main der Seite -->
         <main>
             <h1>Gästebuch</h1>
             <form method="POST">
                 <table>
                     <tr>
+                        <!-- Eingabe von vor und Nachname-->
                         <td><p>Name / Vorname: </p></td>
                         <td><input type="text" name="name" required></td>
                     </tr>
                     <tr>
+                        <!-- Eingabe der E-Mail Adresse -->
                         <td><p>E-Mail: </p></td>
                         <td><input type="email" name="mail" required></td>
                     </tr>
                     <tr>
+                        <!-- Eingabe der Nachricht -->
                         <td><p>Message: </p></td>
                         <td><textarea name="message" id="" cols="30" rows="10" required></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
+                        <!-- Absenden der Daten -->
                         <td><input type="submit" name="submit" value="Eintragen">  <input type="reset" value="Löschen"></td>
                     </tr>
                 </table>
