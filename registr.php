@@ -62,18 +62,23 @@
     </body>
 </html>
 <?php
+#Wenn Daten Gesendet Werden dann werden sie überprüft
 if(isset($_POST['submit'])) {
     $error = false;
 
     if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error==flase)) {
-		$verbindung = fopen('user.txt', 'a');
+    #Verbinndung wird aufgebaut
+    $verbindung = fopen('user.txt', 'a');
+        #Wenn die Verbinndung besteht dann werden die Daten Gespeichert
         if ($verbindung == TRUE) {
 			$content ="<br>Anrede: " .$_POST['anrede']. "Name: " .$_POST['name']. "<br>Vorname: " .$_POST['vorname']. "<br>Telefon: " .$_POST['telefon']. "<br><br>";
-
+      #Daten werden als UTF-8 in die Datei Gespeichert
 			fputs ($verbindung, utf8_decode("$content"));
 		}
+    #Die Verbinndung zur TXT Datei wird Getrennt
 		fclose($verbindung);
   } else {
+    #Error Falls die Daten Nicht Richtig Ausgefühlt wurden
     echo "Daten wurden Nicht Richtig Ausgefühlt";
   }
 }

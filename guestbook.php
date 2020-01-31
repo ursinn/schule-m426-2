@@ -63,15 +63,19 @@
 if(isset($_POST['submit'])) {
     $error = false;
 
-    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'] && ($error==flase)))) {
-		$verbindung = fopen('guestbook.txt', 'a');
+    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'])) && ($error==flase)) {
+    #Verbinndung wird aufgebaut
+    $verbindung = fopen('guestbook.txt', 'a');
+        #Wenn die Verbinndung besteht dann werden die Daten Gespeichert
         if ($verbindung == TRUE) {
 			$content = "Name: " .$_POST['name']. "<br>Mail: " .$_POST['mail']. "<br>Message: " .$_POST['message']. "<br><br>";
-
+      #Daten werden als UTF-8 in die Datei Gespeichert
 			fputs ($verbindung, utf8_decode("$content"));
 		}
+    #Die Verbinndung zur TXT Datei wird Getrennt
 		fclose($verbindung);
   } else {
+    #Error Falls die Daten Nicht Richtig Ausgefühlt wurden
     echo "Daten wurden Nicht Richtig Ausgefühlt";
   }
 }

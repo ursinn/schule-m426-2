@@ -6,9 +6,11 @@
         <title>PHP-GmbH Home</title>
     </head>
     <body>
+        <!-- Firmen Bild -->
         <header>
             <img src="img/banner.gif">
         </header>
+        <!-- Navigation -->
         <nav>
             <img src="img/tomcat.gif">
             <a href="index.html">
@@ -21,11 +23,13 @@
                 <img src="img/witze.gif">
             </a>
         </nav>
+        <!-- Main der Seite -->
         <main>
             <h1>Gästebuch</h1>
             <p>[<a href="guestbook.php">Gästebuch schreiben</a>]</p>
             <br>
             <p>
+              <!-- Gäste Buch wird ausgelesen -->
             <?php
                 readfile('guestbook.txt');
             ?>
