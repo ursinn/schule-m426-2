@@ -79,7 +79,7 @@ if(isset($_POST['submit'])) {
         #Wenn die Verbinndung besteht dann werden die Daten Gespeichert
 
         if ($verbindung == TRUE) {
-			$content ="<br>Anrede: " .$_POST['anrede']. "Name: " .$_POST['name']. "<br>Vorname: " .$_POST['vorname']. "<br>Telefon: " .$_POST['telefon']. "<br><br>";
+			$content ="Anrede: " .$_POST['anrede']. "<br>Name: " .$_POST['name']. "<br>Vorname: " .$_POST['vorname']. "<br>Telefon: " .$_POST['telefon']. "<br><br>";
       #Daten werden als UTF-8 in die Datei Gespeichert
 			fputs ($verbindung, utf8_decode("$content"));
 		}
