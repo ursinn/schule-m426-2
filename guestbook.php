@@ -53,7 +53,9 @@
 
 <?php
 if(isset($_POST['submit'])) {
-    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message']))) {
+    $error = false;
+
+    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'] && ($error=flase)))) {
 		$verbindung = fopen('guestbook.txt', 'a');
         if ($verbindung == TRUE) {
 			$content = "Name: " .$_POST['name']. "<br>Mail: " .$_POST['mail']. "<br>Message: " .$_POST['message']. "<br><br>";
@@ -61,7 +63,9 @@ if(isset($_POST['submit'])) {
 			fputs ($verbindung, utf8_decode("$content"));
 		}
 		fclose($verbindung);
-    }
+  } else {
+    echo "Daten wurden Nicht Richtig Ausgefühlt";
+  }
 }
 
 ?>
