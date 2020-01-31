@@ -61,6 +61,7 @@
 <?php
 #Wenn Daten Gesendet Werden dann werden sie überprüft
 if(isset($_POST['submit'])) {
+    #Daten werden vorübergehend gespeichert
     $name = trim($_POST['name']);
     $mail = trim($_POST['mail']);
     $message = trim($_POST['message']);

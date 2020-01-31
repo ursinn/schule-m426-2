@@ -64,11 +64,12 @@
 <?php
 #Wenn Daten Gesendet Werden dann werden sie überprüft
 if(isset($_POST['submit'])) {
+  #Daten werden vorübergehend gespeichert
   $name = trim($_POST['name']);
   $anrede = trim($_POST['anrede']);
   $vorname = trim($_POST['vorname']);
   $telefon = trim($_POST['telefon']);
-    $error = false;
+  $error = false;
 
     if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error==flase)) {
 
