@@ -82,7 +82,7 @@ if(isset($_POST['submit'])) {
 		fclose($verbindung);
   } else if($error==true) {
     #Error Falls die Daten Nicht Richtig Ausgefühlt wurden
-    echo "Daten wurden Nicht Richtig Ausgefühlt";
+    echo "Daten wurden Nicht Richtig Ausgefüllt";
   }
 }
 

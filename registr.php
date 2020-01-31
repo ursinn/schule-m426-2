@@ -74,7 +74,7 @@ if(isset($_POST['submit'])) {
 
     if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error==false)) {
 
-    #Verbinndung wird aufgebaut
+    #Verbindung wird aufgebaut
     $verbindung = fopen('user.txt', 'a');
         #Wenn die Verbinndung besteht dann werden die Daten Gespeichert
 
@@ -86,7 +86,7 @@ if(isset($_POST['submit'])) {
     #Die Verbinndung zur TXT Datei wird Getrennt
 		fclose($verbindung);
   } else if($error==true) {
-    #Error Falls die Daten Nicht Richtig Ausgefühlt wurden
+    #Error Falls die Daten Nicht Richtig Ausgefüllt wurden
     echo "Daten wurden Nicht Richtig Ausgefühlt";
   }
 }
