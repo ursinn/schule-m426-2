@@ -72,7 +72,7 @@ if(isset($_POST['submit'])) {
   $telefon = trim($_POST['telefon']);
   $error = false;
 
-    if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error==flase)) {
+    if((!empty($_POST['name'])) && (!empty($_POST['anrede'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error==false)) {
 
     #Verbinndung wird aufgebaut
     $verbindung = fopen('user.txt', 'a');

@@ -69,7 +69,7 @@ if(isset($_POST['submit'])) {
     $message = trim($_POST['message']);
     $error = false;
 
-    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'])) && ($error==flase)) {
+    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'])) && ($error==false)) {
     #Verbinndung wird aufgebaut
     $verbindung = fopen('guestbook.txt', 'a');
         #Wenn die Verbinndung besteht dann werden die Daten Gespeichert
