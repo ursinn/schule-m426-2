@@ -26,6 +26,7 @@
             <form method="post" action="registr.php">
                 <table>
                     <tr>
+                        <!-- Eingabe der Anrede -->
                         <td><p>Anrede</p></td>
                         <td><p><select name="anrede" required>
                             <option value="frau">Frau</option>
@@ -33,19 +34,23 @@
                         </select></p></td>
                     </tr>
                     <tr>
+                        <!-- Eingabe des Vornamens -->
                         <td><p>Vorname</p></td>
-                        <td><input type="text" required></td>
+                        <td><input name="" type="text" required></td>
                     </tr>
                     <tr>
+                        <!-- Eingabe des Namens -->
                         <td><p>Name</p></td>
-                        <td><input type="text" required></td>
+                        <td><input name="" type="text" required></td>
                     </tr>
                     <tr>
+                        <!-- Eingabe der Telefon nummer -->
                         <td><p>Telefon</p></td>
-                        <td><input type="text" required></td>
+                        <td><input name="" type="text" required></td>
                     </tr>
                     <tr>
                         <td></td>
+                        <!-- Absenden der Daten -->
                         <td><input type="submit" value="Eintragen">  <input type="reset" value="Löschen"></td>
                     </tr>
                 </table>
@@ -56,3 +61,20 @@
         </footer>
     </body>
 </html>
+<?php
+if(isset($_POST['submit'])) {
+    $error = false;
+
+    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'] && ($error=flase)))) {
+		$verbindung = fopen('guestbook.txt', 'a');
+        if ($verbindung == TRUE) {
+			$content = "Name: " .$_POST['name']. "<br>Mail: " .$_POST['mail']. "<br>Message: " .$_POST['message']. "<br><br>";
+
+			fputs ($verbindung, utf8_decode("$content"));
+		}
+		fclose($verbindung);
+  } else {
+    echo "Daten wurden Nicht Richtig Ausgefühlt";
+  }
+}
+ ?>
