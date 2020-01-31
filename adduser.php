@@ -23,7 +23,7 @@
         </nav>
         <main>
             <h1>Users</h1>
-            <p>[<a href="guestbook.php">User registrieren</a>]</p>
+            <p>[<a href="registr.php">User registrieren</a>]</p>
             <br>
             <p>
             <?php
