@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <!-- Design-Verknüpfung -->
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <!-- Website Überschrift -->
         <title>PHP-GmbH Home</title>
     </head>
     <body>
