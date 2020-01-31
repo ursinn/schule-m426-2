@@ -36,17 +36,17 @@
                     <tr>
                         <!-- Eingabe des Vornamens -->
                         <td><p>Vorname</p></td>
-                        <td><input name="" type="text" required></td>
+                        <td><input name="vorname" type="text" required></td>
                     </tr>
                     <tr>
                         <!-- Eingabe des Namens -->
                         <td><p>Name</p></td>
-                        <td><input name="" type="text" required></td>
+                        <td><input name="name" type="text" required></td>
                     </tr>
                     <tr>
                         <!-- Eingabe der Telefon nummer -->
                         <td><p>Telefon</p></td>
-                        <td><input name="" type="text" required></td>
+                        <td><input name="telefon" type="text" required></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -65,8 +65,8 @@
 if(isset($_POST['submit'])) {
     $error = false;
 
-    if((!empty($_POST['name'])) && (!empty($_POST['mail'])) && (!empty($_POST['message'] && ($error=flase)))) {
-		$verbindung = fopen('guestbook.txt', 'a');
+    if((!empty($_POST['name'])) && (!empty($_POST['vorname'])) && (!empty($_POST['telefon'])) && ($error=flase)))) {
+		$verbindung = fopen('user.txt', 'a');
         if ($verbindung == TRUE) {
 			$content = "Name: " .$_POST['name']. "<br>Mail: " .$_POST['mail']. "<br>Message: " .$_POST['message']. "<br><br>";
 
